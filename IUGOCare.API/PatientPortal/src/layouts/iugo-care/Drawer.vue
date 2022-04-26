@@ -13,7 +13,7 @@
       :mobile-breakpoint="0"
   >
     <div class="py-0 drawer-wrapper">
-      <router-link to="" class="d-flex mt-4 pa-0 overflow-hidden">
+      <router-link to="/demos" class="d-flex mt-4 pa-0 overflow-hidden">
         <span class="logo">
           <BaseLinkedImage
               :src="require(`@/assets/${iugoImg}`)"
