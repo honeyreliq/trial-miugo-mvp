@@ -1,0 +1,19 @@
+.v-btn
+  &:not(.v-btn--round)
+    @each $name, $size in $btn-sizes
+      &.v-size--#{$name}
+        height: #{$size}px
+        min-width: #{$size}px
+        padding: 0 #{$grid-gutter/2}
+
+.v-btn-toggle > .v-btn.v-btn
+  padding: 0 $grid-gutter !important
+
+.v-btn-toggle .v-btn:not(.v-btn--active):hover::before
+  opacity: 0.16 !important
+
+.v-btn-toggle
+  .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined)
+    background-color: #F5F5F5
+  .theme--dark.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined)
+    background-color: #424242

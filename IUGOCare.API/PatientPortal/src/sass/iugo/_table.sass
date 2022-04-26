@@ -1,0 +1,16 @@
+// WIP, NEED TO FIX ROW STRIPING
+.v-application .v-data-table
+  &.striped tbody tr:nth-of-type(odd):not(.v-data-table__expanded__content)
+    background-color: var(--v-backgroundAlt-base)
+.theme--light.v-data-table tbody tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper):not(.row-active):not(.v-data-table__expanded__row)
+  background: #bbdefb !important
+.theme--light.v-data-table > .v-data-table__wrapper > table > thead > tr > th
+  color: black
+.theme--dark.v-data-table tbody tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper)
+  background: #3D9DD4 !important
+.theme--dark.v-data-table > .v-data-table__wrapper > table > thead > tr > th
+  color: white
+table td, table th
+  border: hidden !important
+tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper)
+  cursor: pointer !important

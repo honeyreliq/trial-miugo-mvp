@@ -1,0 +1,101 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.API", "IUGOCare.API\IUGOCare.API.csproj", "{D1A4B196-FA92-4822-8C25-07D53A2903EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.Application.UnitTests", "IUGOCare.Application.UnitTests\IUGOCare.Application.UnitTests.csproj", "{7D14D431-08FC-4589-8F4A-84D862747C70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.Infrastructure", "IUGOCare.Infrastructure\IUGOCare.Infrastructure.csproj", "{44936985-0E12-4643-96F5-8695D5C7001E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C01C492F-CE75-4D65-9194-6AEDDC2A042B}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		azure-pipelines.yml = azure-pipelines.yml
+		DESIGN.md = DESIGN.md
+		Dockerfile = Dockerfile
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.Application", "IUGOCare.Application\IUGOCare.Application.csproj", "{E7BD45A0-1E12-44F9-8993-19B67EF813E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.Domain", "IUGOCare.Domain\IUGOCare.Domain.csproj", "{D5977359-56BB-4288-9F23-8F7D595A7DA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.Application.IntegrationTests", "IUGOCare.Application.IntegrationTests\IUGOCare.Application.IntegrationTests.csproj", "{9EE27000-7FB2-467B-8382-90354AC12EFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.Audit", "IUGOCare.Audit\IUGOCare.Audit.csproj", "{1D7535DE-5BC2-42B0-9AFB-2ACD1F82E328}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.Domain.UnitTests", "IUGOCare.Domain.UnitTests\IUGOCare.Domain.UnitTests.csproj", "{FF1E8770-BE32-4889-ABC9-1B5EB27BB40B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D5977359-56BB-4288-9F23-8F7D595A7DA2} = {D5977359-56BB-4288-9F23-8F7D595A7DA2}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.Audit.UnitTests", "IUGOCare.Audit.UnitTests\IUGOCare.Audit.UnitTests.csproj", "{983D442D-4E42-4459-BA7F-05A281DF0BBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{B70D0A8B-EA72-420C-B549-2EF3BC60C144}"
+	ProjectSection(SolutionItems) = preProject
+		IUGO API V5.postman_collection.json = IUGO API V5.postman_collection.json
+		Local.postman_environment.json = Local.postman_environment.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IUGOCare.Infrastructure.UnitTests", "IUGOCare.Infrastructure.UnitTests\IUGOCare.Infrastructure.UnitTests.csproj", "{779DACD0-E47B-4AF4-81DF-5C287C14D097}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1A4B196-FA92-4822-8C25-07D53A2903EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A4B196-FA92-4822-8C25-07D53A2903EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A4B196-FA92-4822-8C25-07D53A2903EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A4B196-FA92-4822-8C25-07D53A2903EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D14D431-08FC-4589-8F4A-84D862747C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D14D431-08FC-4589-8F4A-84D862747C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D14D431-08FC-4589-8F4A-84D862747C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D14D431-08FC-4589-8F4A-84D862747C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44936985-0E12-4643-96F5-8695D5C7001E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44936985-0E12-4643-96F5-8695D5C7001E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44936985-0E12-4643-96F5-8695D5C7001E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44936985-0E12-4643-96F5-8695D5C7001E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7BD45A0-1E12-44F9-8993-19B67EF813E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7BD45A0-1E12-44F9-8993-19B67EF813E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7BD45A0-1E12-44F9-8993-19B67EF813E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7BD45A0-1E12-44F9-8993-19B67EF813E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5977359-56BB-4288-9F23-8F7D595A7DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5977359-56BB-4288-9F23-8F7D595A7DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5977359-56BB-4288-9F23-8F7D595A7DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5977359-56BB-4288-9F23-8F7D595A7DA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE27000-7FB2-467B-8382-90354AC12EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE27000-7FB2-467B-8382-90354AC12EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE27000-7FB2-467B-8382-90354AC12EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE27000-7FB2-467B-8382-90354AC12EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D7535DE-5BC2-42B0-9AFB-2ACD1F82E328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7535DE-5BC2-42B0-9AFB-2ACD1F82E328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7535DE-5BC2-42B0-9AFB-2ACD1F82E328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7535DE-5BC2-42B0-9AFB-2ACD1F82E328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1E8770-BE32-4889-ABC9-1B5EB27BB40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1E8770-BE32-4889-ABC9-1B5EB27BB40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1E8770-BE32-4889-ABC9-1B5EB27BB40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1E8770-BE32-4889-ABC9-1B5EB27BB40B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{983D442D-4E42-4459-BA7F-05A281DF0BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983D442D-4E42-4459-BA7F-05A281DF0BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983D442D-4E42-4459-BA7F-05A281DF0BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983D442D-4E42-4459-BA7F-05A281DF0BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{779DACD0-E47B-4AF4-81DF-5C287C14D097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779DACD0-E47B-4AF4-81DF-5C287C14D097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779DACD0-E47B-4AF4-81DF-5C287C14D097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779DACD0-E47B-4AF4-81DF-5C287C14D097}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FEBD4BD6-299C-48F2-8D24-13F9B53219E2}
+	EndGlobalSection
+EndGlobal

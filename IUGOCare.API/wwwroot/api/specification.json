@@ -1,0 +1,2482 @@
+﻿{
+  "x-generator": "NSwag v13.4.2.0 (NJsonSchema v10.1.11.0 (Newtonsoft.Json v12.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "IUGO Care API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/Authentication/settings": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "Authentication_GetAuth0AuthenticationSettings",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CommandTests/patients/{filter}": {
+      "get": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_GetPatients",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PatientQueryFilter"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientsVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/PatientAcceptsToS": {
+      "post": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_PatientAcceptsToS",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientAcceptsToSCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/patient/register": {
+      "post": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_RegisterPatient",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterPatientCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/SendPatientOnboardingEmail": {
+      "post": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_SendPatientOnboardingEmail",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendPatientOnboardingEmailCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/EnableMarketingEmails": {
+      "post": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_EnableMarketingEmails",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnableMarketingEmailsCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/DisableMarketingEmails": {
+      "post": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_DisableMarketingEmails",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisableMarketingEmailsCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/patient/updateemailaddress": {
+      "put": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_UpdateEmailAddress",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEmailAddressCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/CreateObservation": {
+      "post": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_CreateObservation",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateObservationCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/updateObservation": {
+      "put": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_UpdateObservation",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateObservationCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "guid"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/careManagementPrograms": {
+      "get": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_GetCareManagementPrograms",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CareManagementProgramsVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/createOrganization": {
+      "post": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_CreateOrganization",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrganizationCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/organizations": {
+      "get": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_GetOrganizations",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/setPatientCareManagementProgramEnrollment": {
+      "post": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_SetPatientCareMangementProgramEnrollment",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetPatientCareManagementProgramEnrollmentCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/createProvider": {
+      "post": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_CreateProvider",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProviderCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/CommandTests/providers": {
+      "get": {
+        "tags": [
+          "CommandTests"
+        ],
+        "operationId": "CommandTests_GetProviders",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProvidersVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Observations/filter": {
+      "get": {
+        "tags": [
+          "Observations"
+        ],
+        "operationId": "Observations_GetPatientObservations",
+        "parameters": [
+          {
+            "name": "clinicPatientId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "observationCodes",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-position": 2
+          },
+          {
+            "name": "effectiveDateStart",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "effectiveDateEnd",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-position": 4
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientObservationsVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Observations/create": {
+      "post": {
+        "tags": [
+          "Observations"
+        ],
+        "operationId": "Observations_CreateManualObservation",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateManualObservationCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Observations/recentPatientObservationTypes": {
+      "get": {
+        "tags": [
+          "Observations"
+        ],
+        "operationId": "Observations_GetRecentPatientObservationTypes",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecentPatientObservationTypesVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Patients/patients/{filter}": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_GetPatients",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PatientQueryFilter"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientsVm"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Patients/patient": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_GetPatient",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientVm"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Patients/activate": {
+      "post": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_ActivatePatient",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientAcceptsToSCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Patients/enableMarketingEmails": {
+      "post": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_EnableMarketingEmails",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnableMarketingEmailsCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Patients/updatePatientPreferences": {
+      "post": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_UpdatePatientPreferences",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePatientPreferencesCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Patients/updateEmail": {
+      "post": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_UpdateEmail",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientRequestUpdateEmailCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Patients/updateEmail/{token}": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_GetEmailToken",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailTokenVm"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_UseEmailToken",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Patients/patient/profile": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_GetPatientProfile",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientProfileVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Patients/updatePassword": {
+      "post": {
+        "tags": [
+          "Patients"
+        ],
+        "operationId": "Patients_UpdatePassword",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePasswordCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/patients/tours/{tourKey}/skip": {
+      "post": {
+        "tags": [
+          "PatientTours"
+        ],
+        "operationId": "PatientTours_SkipTour",
+        "parameters": [
+          {
+            "name": "tourKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/patients/tours/{tourKey}/finish": {
+      "post": {
+        "tags": [
+          "PatientTours"
+        ],
+        "operationId": "PatientTours_FinishTour",
+        "parameters": [
+          {
+            "name": "tourKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/patients/tours/{tourKey}": {
+      "get": {
+        "tags": [
+          "PatientTours"
+        ],
+        "operationId": "PatientTours_ShouldStartTour",
+        "parameters": [
+          {
+            "name": "tourKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/TargetRanges": {
+      "get": {
+        "tags": [
+          "TargetRanges"
+        ],
+        "operationId": "TargetRanges_GetPatientTargetRanges",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientTargetRangesVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Translations/updatefile/{elementName}/{language}": {
+      "put": {
+        "tags": [
+          "Translations"
+        ],
+        "operationId": "Translations_UpdateTranslationFile",
+        "parameters": [
+          {
+            "name": "elementName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "language",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "type": "file",
+            "name": "file",
+            "in": "formData",
+            "schema": {
+              "type": "string",
+              "format": "binary",
+              "nullable": true
+            },
+            "nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Translations/elements": {
+      "get": {
+        "tags": [
+          "Translations"
+        ],
+        "operationId": "Translations_GetTranslationElements",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TranslationsVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Translations/{elementName}/{language}": {
+      "get": {
+        "tags": [
+          "Translations"
+        ],
+        "operationId": "Translations_GetTranslationByElementByLanguage",
+        "parameters": [
+          {
+            "name": "elementName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "language",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TranslationVm"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PatientsVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patients": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/PatientDto"
+            }
+          }
+        }
+      },
+      "PatientDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "guid"
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "activationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientLanguage": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeZone": {
+            "type": "string",
+            "nullable": true
+          },
+          "windowsTimeZone": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientTheme": {
+            "type": "string",
+            "nullable": true
+          },
+          "tooltips": {
+            "type": "boolean"
+          },
+          "dateFormat": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeFormat": {
+            "type": "string",
+            "nullable": true
+          },
+          "medicaidNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "medicareNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "medicalRecordNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "insuranceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "clinicPatientId": {
+            "type": "string",
+            "format": "guid"
+          }
+        }
+      },
+      "PatientQueryFilter": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "AllPatients",
+          "ActiveOnly",
+          "InactiveOnly"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "PatientAcceptsToSCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "RegisterPatientCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinicPatientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "clinicId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "clinicSubdomain": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "givenName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "familyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientLanguage": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientTimeZone": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientWindowsTimeZone": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "primaryCareProviderId": {
+            "type": "string",
+            "format": "guid",
+            "nullable": true
+          },
+          "addressLine1": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "emergencyContactName": {
+            "type": "string",
+            "nullable": true
+          },
+          "emergencyContactPhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "emergencyContactRelationship": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "SendPatientOnboardingEmailCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "clinicPatientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "EnableMarketingEmailsCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "format": "guid"
+          }
+        }
+      },
+      "DisableMarketingEmailsCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "format": "guid"
+          }
+        }
+      },
+      "Unit": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "UpdateEmailAddressCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateObservationCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observationId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "clinicPatientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "observationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source": {
+            "type": "string",
+            "nullable": true
+          },
+          "observationStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "observationLevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "isReviewed": {
+            "type": "boolean"
+          },
+          "isReviewedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "reviewedByName": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "observationDataList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ObservationDataItem"
+            }
+          }
+        }
+      },
+      "ObservationDataItem": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "guid"
+          },
+          "observationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateObservationCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observationId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "observationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "observationDataList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ObservationDataItem"
+            }
+          }
+        }
+      },
+      "CareManagementProgramsVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "careManagementPrograms": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CareManagementProgramDto"
+            }
+          }
+        }
+      },
+      "CareManagementProgramDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "guid"
+          },
+          "shortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateOrganizationCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "guid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLines": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "OrganizationsVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "organizations": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/OrganizationDto"
+            }
+          }
+        }
+      },
+      "OrganizationDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "guid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressAddressLines": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressState": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCountry": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "SetPatientCareManagementProgramEnrollmentCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinicPatientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "careProgramShortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "isEnrolled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "CreateProviderCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "guid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLines": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationId": {
+            "type": "string",
+            "format": "guid"
+          }
+        }
+      },
+      "ProvidersVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "providers": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ProviderDto"
+            }
+          }
+        }
+      },
+      "ProviderDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "guid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressAddressLines": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressState": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressZipCode": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "PatientObservationsVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observations": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/PatientObservationDto"
+            }
+          }
+        }
+      },
+      "PatientObservationDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "guid"
+          },
+          "observationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source": {
+            "type": "string",
+            "nullable": true
+          },
+          "observationStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "observationLevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "isReviewed": {
+            "type": "boolean"
+          },
+          "isReviewedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "reviewedByName": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "change": {
+            "type": "string",
+            "nullable": true
+          },
+          "observationsData": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/PatientObservationDataDto"
+            }
+          }
+        }
+      },
+      "PatientObservationDataDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateManualObservationCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "observationDataList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ManualObservationDataItem"
+            }
+          }
+        }
+      },
+      "ManualObservationDataItem": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "RecentPatientObservationTypesVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observationTypes": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ObservationTypeDto"
+            }
+          }
+        }
+      },
+      "ObservationTypeDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observationType": {
+            "type": "string",
+            "nullable": true
+          },
+          "observationOrder": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PatientVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "guid"
+          },
+          "givenName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "familyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientLanguage": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeZone": {
+            "type": "string",
+            "nullable": true
+          },
+          "windowsTimeZone": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientTheme": {
+            "type": "string",
+            "nullable": true
+          },
+          "tooltips": {
+            "type": "boolean"
+          },
+          "dateFormat": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeFormat": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "medicaidNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "medicareNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "medicalRecordNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "insuranceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "clinicPatientIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        }
+      },
+      "UpdatePatientPreferencesCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "patientLanguage": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeZone": {
+            "type": "string",
+            "nullable": true
+          },
+          "windowsTimeZone": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientTheme": {
+            "type": "string",
+            "nullable": true
+          },
+          "tooltips": {
+            "type": "boolean"
+          },
+          "dateFormat": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeFormat": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Result": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "succeeded": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "PatientRequestUpdateEmailCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "EmailTokenVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "tokenExpiration": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "patientId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "givenName": {
+            "type": "string",
+            "nullable": true
+          },
+          "familyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "newEmailAddress": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "PatientProfileVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "emergencyContact": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/EmergencyContactDto"
+              }
+            ]
+          },
+          "patientPrograms": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/PatientCareManagementProgramDto"
+            }
+          }
+        }
+      },
+      "EmergencyContactDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "contactName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "relationship": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "PatientCareManagementProgramDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "billingProvider": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ProviderDto2"
+              }
+            ]
+          },
+          "careManagementPrograms": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CareManagementProgramDto2"
+            }
+          }
+        }
+      },
+      "ProviderDto2": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressAddressLines": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressState": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "organization": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/OrganizationDto2"
+              }
+            ]
+          }
+        }
+      },
+      "OrganizationDto2": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressAddressLines": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressState": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressZipCode": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CareManagementProgramDto2": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdatePasswordCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "format": "guid",
+            "nullable": true
+          },
+          "currentPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "PatientTargetRangesVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "targetRanges": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TargetRangeDto"
+            }
+          }
+        }
+      },
+      "TargetRangeDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true
+          },
+          "criticalHigh": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "atRiskHigh": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "atRiskLow": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "criticalLow": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "TranslationsVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "translations": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TranslationDto"
+            }
+          }
+        }
+      },
+      "TranslationDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "elementName": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "TranslationVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "elementName": {
+            "type": "string",
+            "nullable": true
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileContent": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "JWT": {
+        "type": "apiKey",
+        "description": "Type into the textbox: Bearer {your JWT token}.",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "JWT": []
+    }
+  ]
+}

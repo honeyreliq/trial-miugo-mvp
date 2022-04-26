@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CurrentPasswordRequired" xml:space="preserve">
+    <value>La contraseña actual es requerida.</value>
+  </data>
+  <data name="CurrentPasswordWrong" xml:space="preserve">
+    <value>La contraseña actual es incorrecta.</value>
+  </data>
+  <data name="GenericEmailGreeting" xml:space="preserve">
+    <value>Hola {{PatientName}},</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>La nueva contraseña es requerida.</value>
+  </data>
+  <data name="PasswordChangedSubject" xml:space="preserve">
+    <value>¡Su contraseña ha sido actualizada satisfactoriamente!</value>
+  </data>
+  <data name="PasswordChangedBody_1" xml:space="preserve">
+    <value>Esta es una confirmación de que su contraseña ha sido modificada con éxito el {{DateStamp}} a las {{TimeStamp}}.</value>
+  </data>
+  <data name="PasswordChangedBody_2" xml:space="preserve">
+    <value>Si realizó estos cambios, no se requiere ninguna acción. Si no realizó estos cambios, comuníquese con su proveedor para informarlo.</value>
+  </data>
+  <data name="PasswordChangedBody_3" xml:space="preserve">
+    <value>Sinceramente,&lt;br /&gt;El Equipo de iUGO Care</value>
+  </data>
+  <data name="PasswordRequirement_1" xml:space="preserve">
+    <value>Al menos 8 caracteres</value>
+  </data>
+  <data name="PatientIdRequired" xml:space="preserve">
+    <value>Id de paciente requerido.</value>
+  </data>
+  <data name="SendPatientOnboardingEmailSubject" xml:space="preserve">
+    <value>Incorporación de pacientes</value>
+  </data>
+  <data name="SendPatientOnboardingEmailButtonText" xml:space="preserve">
+    <value>REGÍSTRESE AHORA</value>
+  </data>
+  <data name="SendPatientOnboardingEmailBody_1" xml:space="preserve">
+    <value>Su proveedor de salud lo ha inscrito en iUGO Care.</value>
+  </data>
+  <data name="SendPatientOnboardingEmailBody_2" xml:space="preserve">
+    <value>iUGO Care es una plataforma de salud que le permite recibir atención de salud de alta calidad en cualquier lugar. Usted tendrá acceso a un portal seguro y privado para que su doctor siga, monitoree y coordine algunas de sus preocupaciones o necesidades médicas.</value>
+  </data>
+  <data name="SendPatientOnboardingEmailBody_3" xml:space="preserve">
+    <value>Para completar su registro y acceder a todas las emocionantes características de iUGO Care, por favor registre su cuenta en línea:</value>
+  </data>
+  <data name="SendPatientOnboardingEmailBody_4" xml:space="preserve">
+    <value>&lt;b&gt;Paso 1&lt;/b&gt; De clic en &lt;a style="text-decoration: underline;" href="{{Url}}" target="_blank"&gt;Regístrese Ahora&lt;/a&gt;. Una nueva página web se abrirá en su navegador de internet.</value>
+  </data>
+  <data name="SendPatientOnboardingEmailBody_5" xml:space="preserve">
+    <value>&lt;b&gt;Paso 2&lt;/b&gt; Siga las instrucciones para crear una contraseña para su cuenta.</value>
+  </data>
+  <data name="SendPatientOnboardingEmailBody_6" xml:space="preserve">
+    <value>&lt;b&gt;Paso 3&lt;/b&gt; Inicie sesión en &lt;a style="text-decoration: underline;" href="http://www.iugocare.com" target="_blank"&gt;www.iugocare.com&lt;/a&gt; usando su contraseña.</value>
+  </data>
+  <data name="SendPatientOnboardingEmailBody_7" xml:space="preserve">
+    <value>Si usted cree que este correo electrónico fue enviado por error, por favor omítalo y bórrelo. Si usted tiene preguntas acerca de el uso del portal iUGO Care, por favor contacte a su profesional de la salud.</value>
+  </data>
+  <data name="EmailUpdatedSubject" xml:space="preserve">
+    <value>¡Su dirección de correo electrónico ha sido actualizada con éxito!</value>
+  </data>
+  <data name="EmailUpdatedBody_1" xml:space="preserve">
+    <value>Esta es una confirmación de que su dirección de correo electrónico en su cuenta del Portal del paciente de iUGO Care se ha cambiado con éxito el {{DateStamp}} en {{TimeStamp}}.</value>
+  </data>
+  <data name="EmailUpdatedBody_2" xml:space="preserve">
+    <value>Si realizó estos cambios, no se requiere ninguna acción. Si no realizó estos cambios, comuníquese con su proveedor para informarlo.</value>
+  </data>
+  <data name="EmailUpdatedBody_3" xml:space="preserve">
+    <value>Sinceramente,&lt;br /&gt;El Equipo de iUGO Care</value>
+  </data>
+  <data name="EmailUpdateRequestSubject" xml:space="preserve">
+    <value>Por favor verifique su dirección de correo electrónico</value>
+  </data>
+  <data name="EmailUpdateRequestBody_1" xml:space="preserve">
+    <value>Su dirección de correo electrónico ha sido actualizada en la plataforma iUGO Care.</value>
+  </data>
+  <data name="EmailUpdateRequestBody_2" xml:space="preserve">
+    <value>Por favor haga clic en el siguiente enlace para verificar su nueva dirección de correo electrónico:</value>
+  </data>
+  <data name="EmailUpdateRequestBody_3" xml:space="preserve">
+    <value>&lt;a style="text-decoration: underline;"  href="{{Url}}" target="_blank"&gt;{{Url}}&lt;/a&gt;</value>
+  </data>
+  <data name="EmailUpdateRequestBody_4" xml:space="preserve">
+    <value>Si no realizó estos cambios, ignore este correo electrónico y comuníquese con su proveedor para informarlo.</value>
+  </data>
+  <data name="EmailUpdateRequestBody_5" xml:space="preserve">
+    <value>Sinceramente,&lt;br /&gt;El Equipo de iUGO Care</value>
+  </data>
+  <data name="PasswordRequirement_2" xml:space="preserve">
+    <value>Minúsculas (a-z)</value>
+  </data>
+  <data name="PasswordRequirement_3" xml:space="preserve">
+    <value>Mayúsculas (A-Z)</value>
+  </data>
+  <data name="PasswordRequirement_4" xml:space="preserve">
+    <value>Números (i.e. 0-9)</value>
+  </data>
+  <data name="PasswordStrengthError" xml:space="preserve">
+    <value>Contraseña demasiado débil</value>
+  </data>
+  <data name="EmailAddressRequired" xml:space="preserve">
+    <value>La dirección de correo electrónico es requerida.</value>
+  </data>
+  <data name="EmailAddressWrongFormat" xml:space="preserve">
+    <value>El formato de la dirección de correo electrónico es incorrecto.</value>
+  </data>
+  <data name="NewEmailInUse" xml:space="preserve">
+    <value>La dirección de correo electrónico suministrada ya se encuentra en uso.</value>
+  </data>
+  <data name="PatientMustBeActive" xml:space="preserve">
+    <value>El paciente debe estar activo.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>La contraseña es incorrecta</value>
+  </data>
+</root>

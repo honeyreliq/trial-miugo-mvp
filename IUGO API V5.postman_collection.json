@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "a5d86f06-e964-4ebf-acda-751c4b770914",
+		"name": "IUGO API V5",
+		"description": "Collection for IUGO API V5 tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:65045/api/Observations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}api/Observations",
+					"host": [
+						"{{domain}}api"
+					],
+					"path": [
+						"Observations"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessToken",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1FRkVPREZCTWtGQ016ZEJRMEkxTURKR01qZEZNVGRETVRZeE1VWTVPRFV6TWpNM00wTTBOUSJ9.eyJpc3MiOiJodHRwczovL3JlbGlxaGVhbHRoLWRldi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8ZTM1NDZiYjYtNGUzNS00OGUxLTkxYTktMmIzOWUzNGM4MTM4IiwiYXVkIjpbImh0dHBzOi8vcmVsaXFoZWFsdGgtZGV2LmF1dGgwLmNvbS9hcGkvdjIvIiwiaHR0cHM6Ly9yZWxpcWhlYWx0aC1kZXYuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU4OTk5MzgyMywiZXhwIjoxNTkwMDgwMjIzLCJhenAiOiJSU0E2ZVZHM1FTeXhBenlnQWhRSHJvTVVuRkc4dUdhOSIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwifQ.npZK2jQZ_jXmwR9_SkbCbe_k-yalIkNGpy5CcgorCFG2cegp1vpJoEbrer--TO3MnkdzukDImPwhmAwkcj0-oWJyjSAPgUJVwto3YSmP5bAwZ-73eqpe0gTaktn0GILmgXUdoStwqivlCSj0pfNZahcFUha_6hdzN8KF8V3XL8-y1KIIddJkOGzdZDWhADrP8Z95UKkBYpcCHNBIfQWVkiPI0uuQJnvhPc_7ov464YP3VbkapSxNKE3l3brdDHLCK10FzVyoqqVhR6bBS-46AfbqDbpjJmvuHqwuQ5w2Tlf27iv4euq2UPhHmdPhqLY_m1Cn0k9U6sC9KyoxKtqxtQ",
+				"type": "string"
+			},
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "562f2a71-afe9-4086-aec8-4d20bdc7277f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "80cd9ed9-40a2-4e52-8601-41211108d9f5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

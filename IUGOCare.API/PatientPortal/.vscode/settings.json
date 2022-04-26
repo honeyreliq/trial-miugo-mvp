@@ -1,0 +1,19 @@
+{
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.pytest_cache": true,
+    "**/.svn": true,
+    "**/.vs": true,
+    "**/*.sln.user": true,
+    "**/CVS": true,
+    "**/desktop.ini": true,
+    "**/dist": true,
+    "env": true,
+    "venv": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true
+}

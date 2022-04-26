@@ -1,0 +1,37 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+// Globals
+$body-font-family: 'Open Sans', Tahoma, sans-serif !default;
+$heading-font-family: $body-font-family !default;
+$font-size-root: 14px !default;
+$line-height-root: 1.5 !default;
+$border-radius-root: 4px !default;
+$list-item-dense-title-line-height: 1.75rem !default;
+$btn-text-transform: capitalize !default;
+$spacer: 4px !default;
+$grid-gutter: $spacer * 4 !default;
+$container-padding-x: $grid-gutter / 2 !default;
+$btn-sizes: (
+  'x-small': 28,
+  'small': 36,
+  'default': 40,
+  'large': 44,
+  'x-large': 52
+);
+$btn-toggle-btn-height: 'auto' !default;
+$btn-toggle-btn-width: 'auto' !default;
+$material-light: (
+  'app-bar': var(--v-appbar-base),
+  'background':  var(--v-background-base),
+  'bottom-navigation': var(--v-bottomNav-base),
+);
+$material-dark: (
+  'app-bar': var(--v-appbar-base),
+  'background':  var(--v-background-base),
+  'bottom-navigation': var(--v-bottomNav-base),
+);

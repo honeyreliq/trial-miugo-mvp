@@ -1,0 +1,52 @@
+.theme--light .v-step 
+    background-color: var(--v-darkGrey-base) !important
+
+.theme--light .v-step .v-step__arrow 
+    border-color: var(--v-darkGrey-base) !important
+
+.theme--dark .v-step 
+    background-color: var(--v-primary-base) !important
+
+.theme--dark .v-step .v-step__arrow 
+    border-color: var(--v-primary-base) !important
+
+.v-step[x-placement^="top"] .v-step__arrow 
+    border-width: 0.5rem 0.5rem 0 0.5rem
+    border-left-color: transparent !important
+    border-right-color: transparent !important
+    border-bottom-color: transparent !important
+    bottom: -0.5rem
+    left: calc(50% - 1rem)
+    margin-top: 0
+    margin-bottom: 0
+  
+.v-step[x-placement^="bottom"] .v-step__arrow 
+    border-width: 0 0.5rem 0.5rem 0.5rem
+    border-left-color: transparent !important
+    border-right-color: transparent !important
+    border-top-color: transparent !important
+    top: -0.5rem
+    left: calc(50% - 1rem)
+    margin-top: 0
+    margin-bottom: 0
+
+
+.v-step[x-placement^="right"] .v-step__arrow 
+    border-width: 0.5rem 0.5rem 0.5rem 0
+    border-left-color: transparent !important
+    border-top-color: transparent !important
+    border-bottom-color: transparent !important
+    left: -0.5rem
+    top: calc(50% - 1rem)
+    margin-left: 0
+    margin-right: 0
+
+.v-step[x-placement^="left"] .v-step__arrow 
+    border-width: 0.5rem 0 0.5rem 0.5rem
+    border-top-color: transparent !important
+    border-right-color: transparent !important
+    border-bottom-color: transparent !important
+    right: -0.5rem
+    top: calc(50% - 1rem)
+    margin-left: 0
+    margin-right: 0
