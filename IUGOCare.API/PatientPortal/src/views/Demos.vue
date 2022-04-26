@@ -10,7 +10,7 @@
       <h1 class="font-weight-black extra-large white--text mb-8">DEMOS</h1>
     </v-col>
     <v-col cols="12" class="text-center theme--light">
-      <BaseButton class="white text-center mr-4 mb-4 light" height="200" width="200" to="/iugo-care">
+      <BaseButton class="white text-center mr-4 mb-4 light" height="200" width="200" to="/iugo-care/PatientProfile.vue">
         <fa-icon :icon="['fad', 'user-md']" class="fa-fw" />
         <div class="text-h5 ma-4 black--text">iUGO Care</div>
       </BaseButton>
